@@ -8,5 +8,5 @@ All the content is a reproduction of the problems solved in :
 
 by:
 
-Himanshu Singh
+Himanshu Singh and
 Yunis Ahmad Lone 
