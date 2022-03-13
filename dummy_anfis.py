@@ -1,9 +1,8 @@
 # Importing necessary libraries
-import anfis
-from anfis.membership import membershipfunction, mfDerivs
+from anfis import anfis as af, membershipfunction, mfDerivs
 import numpy
 
-training_data = numpy.loadtxt("training.txt", usecols=[1,2,3])
+training_data = numpy.loadtxt("data/anfisdata/trainingSet.txt", usecols=[1,2,3])
 X = training_data [:,0:2]
 Y = training_data [:,2]
 
@@ -22,7 +21,7 @@ mf = [[
 # Updating the model with Membership Functions
 mfc = membershipfunction.MemFuncs(mf)
 # Creating the ANFIS Model Object
-anf = anfis.ANFIS(X, Y, mfc)
+anf = af.ANFIS(X, Y, mfc)
 # Fitting the ANFIS Model
 anf.trainHybridJangOffLine(epochs=20)
 
