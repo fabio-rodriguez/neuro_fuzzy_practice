@@ -13,9 +13,9 @@ engine.input_variables = [
         maximum=1.000,
         lock_range=False,
         terms=[
-            fl.Bell("Dark", -10.000, 5.000, 3.000), #Generalized Bell Membership Function defining "Dark"
-            fl.Bell("medium", 0.000, 5.000, 3.000), #Generalized Bell Membership Function defining "Medium"
-            fl.Bell("Bright", 10.000, 5.000, 3.000) #Generalized Bell Membership Function defining "Bright"
+            fl.Bell("DARK", -10.000, 5.000, 3.000), #Generalized Bell Membership Function defining "Dark"
+            fl.Bell("MEDIUM", 0.000, 5.000, 3.000), #Generalized Bell Membership Function defining "Medium"
+            fl.Bell("BRIGHT", 10.000, 5.000, 3.000) #Generalized Bell Membership Function defining "Bright"
         ]
     )
 ]
@@ -51,7 +51,7 @@ engine.rule_blocks = [
         implication=None,
         activation=fl.General(),
         rules=[
-            fl.Rule.create("if Ambient is DARK then Power is HIGH",engine),
+            fl.Rule.create("if Ambient is DARK then Power is HIGH", engine),
             fl.Rule.create("if Ambient is MEDIUM then Power is MEDIUM", engine),
             fl.Rule.create("if Ambient is BRIGHT then Power is LOW",engine)
         ]
